@@ -12,11 +12,6 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class HomeController {
 
-    /**
-     * Description: 首页
-     * Author: stone-jin
-     * Date: 2016/10/14
-     */
     @RequestMapping("/")
     public ModelAndView homePage(){
         return new ModelAndView("/layout/layout");
