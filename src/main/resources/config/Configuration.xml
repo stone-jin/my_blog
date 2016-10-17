@@ -2,10 +2,10 @@
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-    <!-- mybatis别名定义 -->
-    <typeAliases>
-        <typeAlias alias="User" type="com.mybatis.test.User"/>
-    </typeAliases>
+    <!--&lt;!&ndash; mybatis别名定义 &ndash;&gt;-->
+    <!--<typeAliases>-->
+        <!--<typeAlias alias="User" type="com.mybatis.test.User"/>-->
+    <!--</typeAliases>-->
 
     <environments default="development">
         <environment id="development">
@@ -20,7 +20,7 @@
     </environments>
 
     <!-- mybatis的mapper文件，每个xml配置文件对应一个接口 -->
-    <!--<mappers>-->
-        <!--<mapper resource="classpath:config/mybatis/User.xml"/>-->
-    <!--</mappers>-->
+    <mappers>
+        <mapper resource="config/mybatis/User.xml"/>
+    </mappers>
 </configuration>

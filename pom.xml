@@ -51,6 +51,21 @@
       <version>2.5.0</version>
     </dependency>
     <!-- springmvc 支持requestBody responseBody -->
+
+    <!-- MySQL database driver -->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>5.0.5</version>
+    </dependency>
+
+    <!-- mybatis -->
+    <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis</artifactId>
+      <version>3.4.1</version>
+    </dependency>
   </dependencies>
     <build>
         <outputDirectory>src/main/webapp/WEB-INF/classes</outputDirectory>
