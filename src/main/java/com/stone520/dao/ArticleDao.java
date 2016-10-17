@@ -1,5 +1,7 @@
 package com.stone520.dao;
 
+import com.stone520.Mapper.ArticleMapperInterface;
+import com.stone520.bean.Article;
 import com.stone520.db.DBAccess;
 import org.apache.ibatis.session.SqlSession;
 
@@ -13,23 +15,22 @@ import java.util.List;
  */
 public class ArticleDao {
     public List<Article> queryArticles(){
-        System.out.println("2222222222222=============");
         DBAccess dbAccess = new DBAccess();
         SqlSession sqlSession = null;
+        List<Article> articles = null;
         try {
             sqlSession = dbAccess.getSqlSession();
             //通过SqlSession执行SQL语句
-            List<Article> articles = sqlSession.selectList("com.stone520.blog_article.selectArticle");
-            System.out.println(articles);
+            ArticleMapperInterface articleMapperInterface = sqlSession.getMapper(com.stone520.Mapper.ArticleMapperInterface.class);
+            articleMapperInterface.insertArticle("1111111");
+            sqlSession.commit();
         } catch (IOException e) {
-            System.out.println("================>");
             e.printStackTrace();
         }finally {
             if(sqlSession != null){
                 sqlSession.close();
             }
         }
-        System.out.println("=====================");
-        return null;
+        return articles;
     }
 }

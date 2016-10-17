@@ -3,12 +3,12 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.stone520">
-    <resultMap type="com.stone520.dao.Article" id="article">
+    <resultMap type="com.stone520.bean.Article" id="Article111">
         <id column="id" jdbcType="INTEGER" property="id"/>
         <result column="content" jdbcType="VARCHAR" property="content"/>
     </resultMap>
 
-    <select id="selectArticle" resultType="article">
+    <select id="queryArticles" resultMap="Article111">
         select id, content from blog_article
     </select>
 </mapper>

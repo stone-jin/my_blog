@@ -1,4 +1,4 @@
-package com.stone520.dao;
+package com.stone520.bean;
 
 /**
  * Description:

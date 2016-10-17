@@ -14,12 +14,12 @@ import java.io.Reader;
  * Date: 2016/10/14
  */
 public class DBAccess {
-
     public SqlSession getSqlSession() throws IOException {
         String resource = "config/Configuration.xml";
         Reader reader =  Resources.getResourceAsReader(resource);
 
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);
+        sqlSessionFactory.getConfiguration().addMapper(com.stone520.Mapper.ArticleMapperInterface.class);
         SqlSession sqlSession = sqlSessionFactory.openSession();
         return sqlSession;
     }

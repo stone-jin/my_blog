@@ -1,6 +1,5 @@
 package com.stone520.controller.xhr;
 
-import com.stone520.dao.Article;
 import com.stone520.model.ArticleInfo;
 import com.stone520.model.ArticleResult;
 import org.springframework.stereotype.Controller;

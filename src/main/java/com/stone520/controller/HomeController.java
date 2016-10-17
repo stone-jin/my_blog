@@ -1,9 +1,12 @@
 package com.stone520.controller;
 
+import com.stone520.bean.Article;
 import com.stone520.dao.ArticleDao;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+
+import java.util.List;
 
 /**
  * Description:
@@ -26,7 +29,7 @@ public class HomeController {
     @RequestMapping("/test")
     public void Test(){
         ArticleDao articleDao = new ArticleDao();
-        articleDao.queryArticles();
+        List<Article> articles = articleDao.queryArticles();
         return;
     }
 }
