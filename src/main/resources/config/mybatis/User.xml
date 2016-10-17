@@ -5,7 +5,7 @@
 <mapper namespace="com.stone520">
     <resultMap type="com.stone520.dao.Article" id="article">
         <id column="id" jdbcType="INTEGER" property="id"/>
-        <result column="content" jdbcType="TEXT" property="content"/>
+        <result column="content" jdbcType="VARCHAR" property="content"/>
     </resultMap>
 
     <select id="selectArticle" resultType="article">

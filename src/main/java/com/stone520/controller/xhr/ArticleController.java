@@ -20,7 +20,6 @@ public class ArticleController {
     @RequestMapping("/article")
     @ResponseBody
     public ArticleResult publicArticle(@RequestBody ArticleInfo articleInfo){
-        System.out.println(articleInfo.toString());
         ArticleResult article = new ArticleResult();
         return article;
     }

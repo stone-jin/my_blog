@@ -13,17 +13,21 @@ import java.util.List;
  */
 public class ArticleDao {
     public List<Article> queryArticles(){
+        System.out.println("2222222222222=============");
         DBAccess dbAccess = new DBAccess();
         SqlSession sqlSession = null;
         try {
             sqlSession = dbAccess.getSqlSession();
             //通过SqlSession执行SQL语句
-            //List<Article> articles = sqlSession.selectList("com.stone520.blog_article.selectArticle");
-            //System.out.println(articles);
+            List<Article> articles = sqlSession.selectList("com.stone520.blog_article.selectArticle");
+            System.out.println(articles);
         } catch (IOException e) {
+            System.out.println("================>");
             e.printStackTrace();
         }finally {
-            sqlSession.close();
+            if(sqlSession != null){
+                sqlSession.close();
+            }
         }
         System.out.println("=====================");
         return null;
