@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stone520.label">
+    <insert id="add_label" parameterType="com.stone520.bean.ArticleLabel">
+        insert into blog_label(labelName, author) VALUES (#{labelName}, #{author})
+    </insert>
+
+    <delete id="delete_label" parameterType="com.stone520.bean.ArticleLabel">
+        delete from blog_label WHERE id = #{id}
+    </delete>
+
+    <update id="update_label" parameterType="com.stone520.bean.ArticleLabel">
+        update blog_label SET labelName = #{labelName} WHERE id = #{id}
+    </update>
+</mapper>

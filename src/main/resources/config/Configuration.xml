@@ -22,5 +22,6 @@
     <!-- mybatis的mapper文件，每个xml配置文件对应一个接口 -->
     <mappers>
         <mapper resource="config/mybatis/User.xml"/>
+        <mapper resource="config/mybatis/Blog_label.xml"/>
     </mappers>
 </configuration>

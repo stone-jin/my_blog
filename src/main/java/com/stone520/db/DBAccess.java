@@ -19,7 +19,7 @@ public class DBAccess {
         Reader reader =  Resources.getResourceAsReader(resource);
 
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);
-        sqlSessionFactory.getConfiguration().addMapper(com.stone520.Mapper.ArticleMapperInterface.class);
+        //sqlSessionFactory.getConfiguration().addMapper(com.stone520.Mapper.ArticleMapperInterface.class);
         SqlSession sqlSession = sqlSessionFactory.openSession();
         return sqlSession;
     }

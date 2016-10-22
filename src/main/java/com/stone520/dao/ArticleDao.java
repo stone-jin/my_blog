@@ -21,8 +21,8 @@ public class ArticleDao {
         try {
             sqlSession = dbAccess.getSqlSession();
             //通过SqlSession执行SQL语句
-            ArticleMapperInterface articleMapperInterface = sqlSession.getMapper(com.stone520.Mapper.ArticleMapperInterface.class);
-            articleMapperInterface.insertArticle("1111111");
+            //ArticleMapperInterface articleMapperInterface = sqlSession.getMapper(com.stone520.Mapper.ArticleMapperInterface.class);
+            //articleMapperInterface.insertArticle("1111111");
             sqlSession.commit();
         } catch (IOException e) {
             e.printStackTrace();

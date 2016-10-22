@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stone520.article">
+
+    <select id="query_article">
+        select id, title, content, add_time, publish_time, update_time, status, is_publish, is_top, access_count, author from blog_article;
+    </select>
+</mapper>
