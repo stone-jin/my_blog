@@ -23,7 +23,7 @@ public class HomeController {
      */
     @RequestMapping("/")
     public ModelAndView homePage(){
-        return new ModelAndView("/layout/layout");
+        return new ModelAndView("/pages/home");
     }
 
     @RequestMapping("/test")

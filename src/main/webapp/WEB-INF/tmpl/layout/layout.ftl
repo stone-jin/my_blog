@@ -1,23 +1,25 @@
+<#include "/lib/common.ftl">
+
+<#macro Layout style script titleSuffix="" keywords="后台，运维，管理" description="搭建基础后台平台">
+<#escape x as x?html>
+<#compress>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
-</head>
+<@Head titleSuffix=titleSuffix keywords=keywords description=description>
+    <#if style??>
+        <@style></@style>
+    </#if>
+</@Head>
 <body>
-<script>
-    var data = {"content": "234"};
-    $.ajax({
-        type: 'POST',
-        url: "/my_blog/xhr/article",
-        data: JSON.stringify(data),
-        contentType: "application/json",
-        dataType : 'json',
-        success: function(result){
-            console.log(result);
-        }
-    });
-</script>
+    <#nested>
+
+    <#-- 公用js -->
+    <@corejs />
+    <#if script??>
+        <@script></@script>
+    </#if>
 </body>
 </html>
+</#compress>
+</#escape>
+</#macro>
